@@ -1,13 +1,34 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网址导航</title>
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>网址导航</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索网站...">
+            <i class="fas fa-search"></i>
+        </div>
+        <nav>
+            <a href="#" class="category-filter active" data-category="all">全部</a>
+            <a href="#" class="category-filter" data-category="tools">工具</a>
+            <a href="#" class="category-filter" data-category="study">学习</a>
+            <a href="#" class="category-filter" data-category="life">生活</a>
+            <a href="admin.html" class="admin-link">管理</a>
+        </nav>
+    </header>
+
+    <main id="sites-container">
+        <!-- 网站卡片将通过JavaScript动态生成 -->
+    </main>
+
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
 </html>
