@@ -31,6 +31,9 @@ async function fetchSites() {
         renderSites(sites);
     } catch (error) {
         console.error('获取数据失败:', error);
+        // 添加错误提示
+        const container = document.getElementById('sites-container');
+        container.innerHTML = '<div class="error-message">获取数据失败，请稍后重试</div>';
     }
 }
 

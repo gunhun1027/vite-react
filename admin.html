@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航网站管理后台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>导航网站管理后台</h1>
+            <a href="index.html" class="back-link"><i class="fas fa-home"></i> 返回首页</a>
+        </header>
+
+        <div class="admin-content">
+            <div class="admin-panel">
+                <h2>添加新网站</h2>
+                <form id="addSiteForm">
+                    <div class="form-group">
+                        <label for="title">网站名称</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="url">网站地址</label>
+                        <input type="url" id="url" name="url" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">分类</label>
+                        <select id="category" name="category" required>
+                            <option value="tools">工具</option>
+                            <option value="study">学习</option>
+                            <option value="life">生活</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">描述</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">添加网站</button>
+                </form>
+            </div>
+
+            <div class="admin-panel">
+                <h2>网站列表</h2>
+                <div id="sitesList" class="sites-list">
+                    <!-- 网站列表将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html> 
